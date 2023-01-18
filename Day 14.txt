@@ -1,0 +1,46 @@
+/*
+Day 14 coding Statement : Write a program to reverse a given number
+
+Description
+Get an input from the user and the print the reverse of the given number as the output
+E.g. let the number be 324 then the reverse of the number is 423
+
+Input
+675
+Output
+576
+*/
+
+C++ Code:
+
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+
+int num;
+
+cin>>num;
+
+int rev=0,rem;
+
+while(num>0)
+
+	{
+    
+	rem=num%10;
+    
+	rev=rev*10+rem;
+    
+	num=num/10;
+
+	}
+
+cout<<rev;
+
+    
+return 0;
+
+}
