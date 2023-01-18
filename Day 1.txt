@@ -1,0 +1,61 @@
+/*Day 1 coding Statement: Write a program to identify if the character is a vowel or consonant.
+
+Description of the program: 
+
+Take an input character from the user and check whether the given input is a vowel or consonant.
+
+Input
+A
+
+Output
+Vowel
+
+Input
+m
+
+Output
+Consonant
+
+Input
+3
+
+Output
+Invalid Input
+*/
+
+C++ Code:
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+char ch;
+
+cin>>ch;
+
+if(ch>='A'&& ch<='Z' || ch>='a' && ch<='z')
+
+	{
+
+	if(ch=='A'||ch=='a'||ch=='E'||ch=='e'||ch=='I'||ch=='i'||ch=='O'||ch=='o'||ch=='U'||ch=='u')
+  
+  		cout<<"Vowel";
+
+	else
+    
+		cout<<"Consonent";
+
+	}
+
+else
+    
+	cout<<"Invalid Input";
+
+
+
+return 0;
+
+}
