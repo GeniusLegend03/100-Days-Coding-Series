@@ -1,0 +1,74 @@
+/*
+Day 20 coding Statement : Write a program to identify if the number is Prime number or not
+
+Description
+Get a number as input from the user and check whether that number is prime or not.
+A prime number is a number with factors as 1 and that number itself.
+
+Input
+1
+Output
+1 is not a prime number
+
+Input
+5
+Output
+5 is a prime number  
+*/
+
+C++ Code:
+
+#include <iostream>
+
+
+using namespace std;
+
+
+int main()
+
+{
+
+int num;
+cin>>num;
+
+if(num<=1)
+
+	{
+    
+	cout<<"Not Prime Number";
+  
+	return 0;
+
+	}
+
+int flag=0;
+
+for(int i=2;i<=num/2;i++)
+
+	{
+    
+	if(num%i==0)
+    
+		{
+        
+		flag=1;
+        
+		break;
+    
+		}
+
+	}
+
+if(flag==1)
+    
+	cout<<"Not Prime Number";
+
+else
+    
+	cout<<"Prime Number";
+
+
+    
+return 0;
+
+}
