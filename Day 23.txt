@@ -1,0 +1,67 @@
+/*
+Day 23 coding Statement : Write a program to Replace all 0’s with 1 in a given integer
+
+Description
+Get a number as input from the user and find the zeros present in that number.
+Then convert the zeros into one and then print it.
+
+Input
+310020
+Output
+311121
+*/
+
+C++ Code:
+
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+
+int num;
+
+cin>>num;
+
+int rem,rev=0;
+
+
+while(num>0)
+
+	{
+    
+	rem=num%10;
+        
+	if(rem==0)
+            
+		rem=1;
+    
+	rev=rev*10+rem;
+    
+	num=num/10;
+
+	}
+
+
+int newnum=0;
+
+while(rev>0)
+
+	{
+    
+	rem=rev%10;
+    
+	newnum=newnum*10+rem;
+   
+ 	rev=rev/10;
+    
+
+	}
+
+cout<<newnum;
+
+    
+return 0;
+
+}

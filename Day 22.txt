@@ -1,0 +1,79 @@
+/*
+Day 22 coding Statement : Write a program to express a number as a sum of two prime numbers
+
+Description
+Get a number as input from the user and express that number as sum of two prime numbers.
+
+Input
+4
+Output
+4 can be expressed as sum of 2 and 2
+*/
+
+C++ Code:
+
+#include <iostream>
+
+using namespace std;
+
+int checkprime(int n)
+
+{
+    
+int check=1;//prime
+    
+for(int i=2;i<=n/2;i++)
+    
+	{
+        
+	if(n%i==0)
+        
+		{
+            
+		check=0;//not prime
+            
+		break;
+        
+		}
+   
+ 	}
+    
+return check;
+
+}
+
+
+int main() 
+{
+    
+int num;
+    
+cin>>num;
+    
+int flag1,flag2;
+   
+for(int i=2;i<=num/2;i++)
+    
+	{
+    
+	flag1=checkprime(i);
+    
+	flag2=checkprime(num-i);
+        
+	if(flag1==1 && flag2==1)//checking both prime
+       
+ 		{
+            
+		cout<<num<<" can be expressed as sum of "<<i<<" and "<<num-i<<endl;
+        
+		}
+        
+      
+        
+    
+	}
+
+    
+return 0;
+
+}
