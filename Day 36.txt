@@ -1,0 +1,50 @@
+/*
+Day 36 coding Statement : Write a Program to Capitalize the first and last letter of each word of a string
+
+Description
+Get a string from the user and then change the first and last letter to uppercase.
+
+Input
+programming
+
+Output
+ProgramminG
+*/
+
+C++ Code:
+
+#include <iostream>
+
+#include<string.h>
+
+using namespace std;
+
+int main() 
+
+{
+
+char s[100];
+
+cin>>s;
+
+int length=strlen(s);
+
+for(int i=0;i<=length-1;i++)
+    
+	{
+        
+	if(i==0||i==length-1)
+            
+		{
+                
+		s[i]=s[i]-32;
+            
+		}
+    
+	}
+
+cout<<s;
+    
+return 0;
+
+}
